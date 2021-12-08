@@ -1,42 +1,61 @@
-// выборка по тегу
-console.log($("a"));
+$(function () {
+  const image = $("img");
+  image.attr("alt", "iphone");
 
-// выборка по классу
-console.log($(".button"));
+  function setAttr(element, attr, value) {
+    element.attr(attr, value);
+  }
 
-// выборка по ID
-console.log($("#myButton"));
+  setAttr(
+    $("img"),
+    "src",
+    "https://pngimg.com/uploads/iphone_12/iphone_12_PNG36.png"
+  );
 
-// вложенность
-console.log($(".menu li"));
+  image.css({ width: "50%" });
+  image.animate({ width: "0%" }, 5000);
+  image.animate({ width: "60%" }, 5000);
+});
 
-// выборка дочерних элементов
-console.log($("section > div"));
+// // выборка по тегу
+// console.log($("a"));
 
-// выборка соседних элементов
-console.log($("img + h2"));
+// // выборка по классу
+// console.log($(".button"));
 
-// выборка по атрибуту
-console.log($("input[type=text]"));
+// // выборка по ID
+// console.log($("#myButton"));
 
-// Фильтры
-// выборка четных (возвращает нечетные)
-console.log($("li:even"));
+// // вложенность
+// console.log($(".menu li"));
 
-// выворка нечетных (возрвращает четные)
-console.log($("li:odd"));
+// // выборка дочерних элементов
+// console.log($("section > div"));
 
-// фильтр исключения
-console.log($("img:not(.logo img)"));
+// // выборка соседних элементов
+// console.log($("img + h2"));
 
-// фильтр на содержание определенных элементов
-console.log($("li:has(a)"));
+// // выборка по атрибуту
+// console.log($("input[type=text]"));
 
-// фильтр на определенный контент
-console.log($("p:contains(client)"));
+// // Фильтры
+// // выборка четных (возвращает нечетные)
+// console.log($("li:even"));
 
-// фильтр первого элемента
-console.log($("li:first"));
+// // выворка нечетных (возрвращает четные)
+// console.log($("li:odd"));
 
-// фильтр последнего элемента
-console.log($("li:last"));
+// // фильтр исключения
+// console.log($("img:not(.logo img)"));
+
+// // фильтр на содержание определенных элементов
+// console.log($("li:has(a)"));
+
+// // фильтр на определенный контент
+// console.log($("p:contains(client)"));
+
+// // фильтр первого элемента
+// console.log($("li:first"));
+
+// // фильтр последнего элемента
+// console.log($("li:last"));
